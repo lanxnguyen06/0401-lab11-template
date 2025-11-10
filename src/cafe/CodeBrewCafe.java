@@ -14,7 +14,7 @@ public class CodeBrewCafe {
         // Single order
         Customer lane = new Customer("Lane");
         Cappuccino cappuccino = new Cappuccino(16);
-
+        
         // TODO: create an order & process the order (see TODO below!)
 
         // Group order

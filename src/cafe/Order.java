@@ -19,10 +19,8 @@ public class Order {
     private boolean fulfilled;
 
     public Order(int orderId, Customer customer, Coffee coffee) {
-        this.orderId = orderId;
-        this.customer = customer;
+        this(orderId, customer);
         this.coffees.add(coffee);
-        this.fulfilled = false;
     }
 
     public Order(int orderId, Customer customer) {

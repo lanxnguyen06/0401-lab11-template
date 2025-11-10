@@ -20,7 +20,7 @@ public class Barista {
             order.markFulfilled();
             System.out.println("Order #" + order.getOrderId() + " ready for pickup!\n");
         } else {
-            prepareOrder(order, true); // delegate to multi-item prepare method
+            // prepareOrder(order, true); // delegate to multi-item prepare method
         }
     }
 
