@@ -14,6 +14,8 @@ public class CodeBrewCafe {
         // Single order
         Customer lane = new Customer("Lane");
         Cappuccino cappuccino = new Cappuccino(16);
+        Order single = new Order(1, lane, cappuccino);
+        processOrder(single);
         
         // TODO: create an order & process the order (see TODO below!)
 
@@ -29,7 +31,7 @@ public class CodeBrewCafe {
     // processOrder includes preparing (Barista) an order and printing the receipt
     // (Order)
     private static void processOrder(Order order) {
-
+    
     }
 
     private static void processOrder(Order order, boolean isGroupOrder) {
