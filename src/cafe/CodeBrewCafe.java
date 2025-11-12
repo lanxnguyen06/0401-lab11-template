@@ -18,16 +18,16 @@ public class CodeBrewCafe {
         Cappuccino cappuccino = new Cappuccino(16);
         Order single = new Order(1, lane, cappuccino);
         processOrder(single);
-        
-        // TODO: create an order & process the order (see TODO below!)
 
         // Group order
         Customer lorelai = new Customer("Lorelai");
         LatteMacchiato vanillaLatte = new LatteMacchiato(16, true);
         Espresso espresso = new Espresso();
+        Affogato affogato = new Affogato();
         List<Coffee> groupOrder = new ArrayList<>(); // stores multiple coffees in a dynamic array so you can add as many coffees as needed
         groupOrder.add(vanillaLatte);
         groupOrder.add(espresso);
+        groupOrder.add(affogato);
         Order group = new Order(2, lorelai, groupOrder);
         processOrder(group, true);
         // TODO: Create a group order (multiple coffees) and process it
@@ -43,7 +43,7 @@ public class CodeBrewCafe {
     }
 
     private static void processOrder(Order order, boolean isGroupOrder) {
-        Barista.prepareOrder(order);
+        Barista.prepareOrder(order, true);
         order.printReceipt();
     }
 }

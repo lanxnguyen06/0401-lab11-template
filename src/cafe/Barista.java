@@ -24,7 +24,6 @@ public class Barista {
 
     // group order
     public static void prepareOrder(Order order, boolean isGroupOrder){
-            if (isGroupOrder){
             System.out.println("Preparing group order # " + order.getOrderId() + " for " + order.getCustomer().getName());
             for (int i = 0; i < order.getCoffees().size(); i++){
                 Coffee coffee = order.getCoffees().get(i); // iterates through the list of coffees and grabs the one at the i index
@@ -34,11 +33,10 @@ public class Barista {
             }
                 order.markFulfilled();
                 System.out.println("Group order # " + order.getOrderId() + " ready for pickup!\n");
-            }
         }
+    }
 
             // prepareOrder(order, true); // delegate to multi-item prepare method
-        }
 
     // TODO: Prepare multiple coffees for a group order
     // Use method overloading and avoid duplicate code!
