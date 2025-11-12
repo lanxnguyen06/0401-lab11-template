@@ -4,7 +4,7 @@
  * Copyright (c) 2025 Nadine von Frankenberg
  */
 
- // NO NEED TO TOUCH THIS FILE
+ // NO NEED TO TOUCH THIS FILE // i changed the two order constructors to take in a single order and group order... my way cause idk how she wanted it
 
 package cafe;
 
@@ -63,7 +63,7 @@ public class Order {
         for (Coffee coffee : coffees) {
             System.out.println(" - " + coffee.getType() + " (" + coffee.getSize() + " oz)");
         }
-        System.out.println("Payment: " + "N/A");
+        System.out.println("Payment: " + "Paying with " + customer.getPaymentType());
         System.out.println("----------------\n");
     }
 }

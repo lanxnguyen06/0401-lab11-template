@@ -32,7 +32,7 @@ public class Barista {
                 coffee.setReadyForPickup();
             }
                 order.markFulfilled();
-                System.out.println("Group order # " + order.getOrderId() + " ready for pickup!\n");
+                System.out.println("Group order #" + order.getOrderId() + " ready for pickup!\n");
         }
     }
 
