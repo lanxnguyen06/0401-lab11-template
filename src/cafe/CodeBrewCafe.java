@@ -7,6 +7,8 @@
 package cafe;
 
 import coffee.*;
+import java.util.List;
+import java.util.ArrayList;
 
 public class CodeBrewCafe {
 
@@ -23,6 +25,11 @@ public class CodeBrewCafe {
         Customer lorelai = new Customer("Lorelai");
         LatteMacchiato vanillaLatte = new LatteMacchiato(16, true);
         Espresso espresso = new Espresso();
+        List<Coffee> groupOrder = new ArrayList<>(); // stores multiple coffees in a dynamic array so you can add as many coffees as needed
+        groupOrder.add(vanillaLatte);
+        groupOrder.add(espresso);
+        Order group = new Order(2, lorelai, groupOrder);
+        processOrder(group, true);
         // TODO: Create a group order (multiple coffees) and process it
 
     }
@@ -31,10 +38,12 @@ public class CodeBrewCafe {
     // processOrder includes preparing (Barista) an order and printing the receipt
     // (Order)
     private static void processOrder(Order order) {
-    
+        Barista.prepareOrder(order);
+        order.printReceipt();
     }
 
     private static void processOrder(Order order, boolean isGroupOrder) {
-
+        Barista.prepareOrder(order);
+        order.printReceipt();
     }
 }

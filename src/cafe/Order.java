@@ -19,13 +19,16 @@ public class Order {
     private boolean fulfilled;
 
     public Order(int orderId, Customer customer, Coffee coffee) {
-        this(orderId, customer);
-        this.coffees.add(coffee);
-    }
-
-    public Order(int orderId, Customer customer) {
         this.orderId = orderId;
         this.customer = customer;
+        this.coffees.add(coffee);
+        this.fulfilled = false;
+    }
+
+    public Order(int orderId, Customer customer, List<Coffee> coffees) {
+        this.orderId = orderId;
+        this.customer = customer;
+        this.coffees.addAll(coffees);
         this.fulfilled = false;
     }
 
@@ -58,7 +61,7 @@ public class Order {
         System.out.println("Order ID: " + orderId);
         System.out.println("Customer: " + customer.getName());
         for (Coffee coffee : coffees) {
-            System.out.println(" • " + coffee.getType() + " (" + coffee.getSize() + " oz)");
+            System.out.println(" - " + coffee.getType() + " (" + coffee.getSize() + " oz)");
         }
         System.out.println("Payment: " + "N/A");
         System.out.println("----------------\n");
